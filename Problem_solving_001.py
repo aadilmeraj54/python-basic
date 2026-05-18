@@ -88,7 +88,7 @@ print("unique items:", unique_items)
 ## • Use a for loop inside the function,
 ## • Print how many have been delivered.
 
-status = ["Deliered","Deliered","shipped","Delivered","cancleed","Delivered","processing","Delivered"]
+status = ["Deliered","shipped","Delivered","cancleed","Delivered","processing","Delivered"]
 
 def count_delivered(status):
     d = 0
@@ -99,3 +99,41 @@ def count_delivered(status):
 
 num=count_delivered(status)
 print("number of Delivred ", num )        
+
+
+
+
+
+# ######You are given:
+## • A set of city names where you have weather data.
+## • A dictionary where each key is a city name and the value is a tuple of (temperature, humidity).
+## Write a function get_weather_report(city_name) that:
+## • Checks if the city is available,
+## • If yes, prints the temperature and humidity,
+## • If not, prints "City not found."
+
+def get_weather_report(city_name):
+    for city in city_name:
+        if city in weather_data:
+            temperature,humidity = weather_data[city] 
+        print(f"Temperature= {temperature} and Humidity= {humidity}")
+available_cities= {"Delhi", "Mumbai", "Chennai",
+"Kolkata"}
+weather_data= {
+    "Delhi": (35,45),
+    "Mumbai": (30,70),
+    "Chennai": (33,65),
+    "Kolkata": (32,60)
+    }
+get_weather_report(available_cities)
+
+
+available_cities = {"delhi","mumbai","chennai","kolkata"}
+weather_date = {
+    "delhi":(35,45),
+    "mumbai":(30,70),
+    "chennai":(33,65),
+    "kolkata":(32,60)
+}
+
+get_weather_report(available_cities)
