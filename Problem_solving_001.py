@@ -114,26 +114,21 @@ print("number of Delivred ", num )
 
 def get_weather_report(city_name):
     for city in city_name:
-        if city in weather_data:
-            temperature,humidity = weather_data[city] 
-        print(f"Temperature= {temperature} and Humidity= {humidity}")
-available_cities= {"Delhi", "Mumbai", "Chennai",
-"Kolkata"}
-weather_data= {
+        if city in weather_date:
+            temperature,humidity = weather_date[city] 
+        print(f"Temperature={temperature} and Humidity= {humidity}")
+
+
+
+
+
+available_cities = {"Delhi", "Mumbai", "Chennai", "Kolkata"}
+
+weather_date = {
     "Delhi": (35,45),
     "Mumbai": (30,70),
     "Chennai": (33,65),
     "Kolkata": (32,60)
-    }
-get_weather_report(available_cities)
-
-
-available_cities = {"delhi","mumbai","chennai","kolkata"}
-weather_date = {
-    "delhi":(35,45),
-    "mumbai":(30,70),
-    "chennai":(33,65),
-    "kolkata":(32,60)
 }
 
 get_weather_report(available_cities)
