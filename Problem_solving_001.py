@@ -77,4 +77,25 @@ def get_unique_items(items):
 wishlist = ["Headphone", "laptop", "camera", "Laptop", "Camera", "shoes"]
 
 unique_items = get_unique_items(wishlist)
-print("unique tems:", unique_items)
+print("unique items:", unique_items)
+
+
+
+###### Question 2: Amazon Order Status Checker
+## Amazon tracks your orders with their status like "Delivered", "Shipped", "Processing", etc.
+## Write a function count_delivered(status_list) that counts how many orders are "Delivered".
+## • You are given a list of statuses of 7 orders,
+## • Use a for loop inside the function,
+## • Print how many have been delivered.
+
+status = ["Deliered","Deliered","shipped","Delivered","cancleed","Delivered","processing","Delivered"]
+
+def count_delivered(status):
+    d = 0
+    for s in status:
+        if(s.lower()=="delivered"):
+            d=d+1
+    return d
+
+num=count_delivered(status)
+print("number of Delivred ", num )        
