@@ -62,3 +62,19 @@ def find_topper(marks):
 top_1 = print(find_topper ( marks))        
 print (top_1)
         
+
+
+
+##### Question 2: Unique Wishlist Items on Amazon
+## You saved items to your Amazon wishlist but accidentally added duplicates.
+## Write a function get_unique_items (items) that:
+## • Takes a list of item names,
+## • Returns a set of unique items (no duplicates).
+
+def get_unique_items(items):
+    return set(items)
+
+wishlist = ["Headphone", "laptop", "camera", "Laptop", "Camera", "shoes"]
+
+unique_items = get_unique_items(wishlist)
+print("unique tems:", unique_items)
