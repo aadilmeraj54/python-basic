@@ -22,3 +22,22 @@ def low_stock_items(stock):
     print(restocked)        
 
 low_stock_items(stock)
+
+
+# #####You're simulating a snooze alarm. The alarm goes off every 5 minutes. 
+ # The person snoozes it until they finally get up after a certain number of minutes.
+
+# Write a function count_snoozes (minutes_awake: int) - int that tells 
+# how many times the person hit snooze before waking
+
+
+
+def count_snooze(minutes_awake):
+    count = 0
+    time = 0
+    while time + 5 <= minutes_awake:
+        count +=1
+        time +=5
+    return count    
+a = count_snooze(23)
+print(a)
