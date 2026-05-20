@@ -5,10 +5,15 @@
 #     print(i)
  
 
- ##### Nested Loop
+#  ##### Nested Loop
+# for hour_hand in range (1,25,1):
+#     for min_hand  in range (1,61,1):
+#         print (hour_hand, "hour", min_hand, "min")
 
-for hour_hand in range (1,25,1):
-    for min_hand  in range (1,61,1):
-        print (hour_hand, "hour", min_hand, "min")
 
+
+for i in range (1,60,2):
+    for j in range(2,3,1):
+        if (i%j==0):
+            print("yoyo")
 
