@@ -12,8 +12,8 @@
 
 
 
-for i in range (1,60,2):
+for i in range (0,60,2):
     for j in range(2,3,1):
         if (i%j==0):
-            print("yoyo")
+            print(i)
 
