@@ -175,6 +175,11 @@
 
         
 
-for i in range(1, 5):
-    print("Hello, World!")
-print("Done")
+# for i in range(1, 5):
+#     print("Hello, World!")
+# print("Done")
+
+name = "Alice"
+age = 20
+print(name)
+print(age)
