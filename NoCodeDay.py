@@ -179,7 +179,12 @@
 #     print("Hello, World!")
 # print("Done")
 
-name = "Alice"
-age = 20
-print(name)
-print(age)
+# name = "Alice"
+# age = 20
+# print(name)
+# print(age)
+
+a = 10
+b = 5
+sum = a + b
+print(sum)
