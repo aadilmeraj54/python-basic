@@ -452,22 +452,35 @@
 
 
 
-import random
+# import random
 
-choices = ["rock", "paper", "scissors"]
+# choices = ["rock", "paper", "scissors"]
 
-computer = random.choice(choices)
-player = input("Choose rock, paper, or scissors: ").lower()
+# computer = random.choice(choices)
+# player = input("Choose rock, paper, or scissors: ").lower()
 
-print("Computer chose:", computer)
+# print("Computer chose:", computer)
 
-if player == computer:
-    print("It's a tie!")
-elif (
-    (player == "rock" and computer == "scissors") or
-    (player == "paper" and computer == "rock") or
-    (player == "scissors" and computer == "paper")
-):
-    print("🎉 You win!")
-else:
-    print("😢 You lose!")
+# if player == computer:
+#     print("It's a tie!")
+# elif (
+#     (player == "rock" and computer == "scissors") or
+#     (player == "paper" and computer == "rock") or
+#     (player == "scissors" and computer == "paper")
+# ):
+#     print("🎉 You win!")
+# else:
+#     print("😢 You lose!")
+
+# Mini Countdown Timer ⏳
+
+import time
+
+seconds = int(input("Enter countdown time in seconds: "))
+
+while seconds > 0:
+    print("Time left:", seconds, "seconds")
+    time.sleep(1)
+    seconds -= 1
+
+print("⏰ Time's up!")
