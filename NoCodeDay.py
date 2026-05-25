@@ -433,8 +433,40 @@
 
 # Mini Temperature Converter 🌡️
 
-temp = float(input("Enter temperature in Celsius: "))
+# temp = float(input("Enter temperature in Celsius: "))
 
-fahrenheit = (temp * 9/5) + 32
+# fahrenheit = (temp * 9/5) + 32
 
-print("Temperature in Fahrenheit:", fahrenheit)
+# print("Temperature in Fahrenheit:", fahrenheit)
+
+# Mini Even or Odd Checker
+
+# number = int(input("Enter a number: "))
+
+# if number % 2 == 0:
+#     print("Even number")
+# else:
+#     print("Odd number")
+
+# Rock Paper Scissors Game ✊📄✂️
+
+import random
+
+choices = ["rock", "paper", "scissors"]
+
+computer = random.choice(choices)
+player = input("Choose rock, paper, or scissors: ").lower()
+
+print("Computer chose:", computer)
+
+if player == computer:
+    print("It's a tie!")
+elif (
+    (player == "rock" and computer == "scissors") or
+    (player == "paper" and computer == "rock") or
+    (player == "scissors" and computer == "paper")
+):
+    print("🎉 You win!")
+else:
+    print("😢 You lose!")
+
