@@ -415,9 +415,18 @@
 
 # Mini Even or Odd Checker
 
-number = int(input("Enter a number: "))
+# number = int(input("Enter a number: "))
 
-if number % 2 == 0:
-    print("Even number")
-else:
-    print("Odd number")
+# if number % 2 == 0:
+#     print("Even number")
+# else:
+#     print("Odd number")
+
+
+# Mini Temperature Converter 🌡️
+
+temp = float(input("Enter temperature in Celsius: "))
+
+fahrenheit = (temp * 9/5) + 32
+
+print("Temperature in Fahrenheit:", fahrenheit)
