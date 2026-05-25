@@ -329,31 +329,51 @@
 #     pygame.display.update()
 #     clock.tick(10)
 
-import time
+# import time
 
-text = "Python is fun and easy to learn."
+# text = "Python is fun and easy to learn."
 
-print("Typing Speed Test")
-print("------------------")
-print("Type this sentence exactly:")
-print(text)
+# print("Typing Speed Test")
+# print("------------------")
+# print("Type this sentence exactly:")
+# print(text)
 
-input("\nPress Enter when you're ready...")
+# input("\nPress Enter when you're ready...")
 
-start_time = time.time()
+# start_time = time.time()
 
-typed = input("\nStart typing: ")
+# typed = input("\nStart typing: ")
 
-end_time = time.time()
+# end_time = time.time()
 
-time_taken = end_time - start_time
+# time_taken = end_time - start_time
 
-if typed == text:
-    words = len(text.split())
-    wpm = (words / time_taken) * 60
+# if typed == text:
+#     words = len(text.split())
+#     wpm = (words / time_taken) * 60
 
-    print("\n✅ Correct!")
-    print(f"Time Taken: {time_taken:.2f} seconds")
-    print(f"Typing Speed: {wpm:.2f} WPM")
-else:
-    print("\n❌ Text did not match.")
+#     print("\n✅ Correct!")
+#     print(f"Time Taken: {time_taken:.2f} seconds")
+#     print(f"Typing Speed: {wpm:.2f} WPM")
+# else:
+#     print("\n❌ Text did not match.")
+
+
+# Mini Dice Roller 🎲
+
+import random
+
+while True:
+    input("Press Enter to roll the dice...")
+    
+    dice = random.randint(1, 6)
+    print("You rolled:", dice)
+
+    again = input("Roll again? (y/n): ").lower()
+
+    if again != 'y':
+        print("Thanks for playing!")
+        break
+
+    # Mini Countdown Timer ⏳
+
