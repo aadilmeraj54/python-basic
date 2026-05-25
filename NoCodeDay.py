@@ -213,17 +213,118 @@
 #     else:
 #         print("Too high! Try again.")
 
+# import random
+# import string
+
+# # Ask user for password length
+# length = int(input("Enter password length: "))
+
+# # Characters to use
+# characters = string.ascii_letters + string.digits + string.punctuation
+
+# # Generate password
+# password = ''.join(random.choice(characters) for _ in range(length))
+
+# print("\nGenerated Password:")
+# print(password)
+
+import pygame
 import random
-import string
+import sys
 
-# Ask user for password length
-length = int(input("Enter password length: "))
+# Initialize pygame
+pygame.init()
 
-# Characters to use
-characters = string.ascii_letters + string.digits + string.punctuation
+# Screen size
+WIDTH = 600
+HEIGHT = 400
+BLOCK = 20
 
-# Generate password
-password = ''.join(random.choice(characters) for _ in range(length))
+# Colors
+BLACK = (0, 0, 0)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+WHITE = (255, 255, 255)
 
-print("\nGenerated Password:")
-print(password)
+# Create screen
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Snake Game")
+
+clock = pygame.time.Clock()
+font = pygame.font.SysFont("Arial", 25)
+
+# Snake settings
+snake = [(100, 100)]
+snake_dir = (BLOCK, 0)
+
+# Food
+food = (
+    random.randrange(0, WIDTH, BLOCK),
+    random.randrange(0, HEIGHT, BLOCK)
+)
+
+score = 0
+
+def draw_snake(snake):
+    for segment in snake:
+        pygame.draw.rect(screen, GREEN, (*segment, BLOCK, BLOCK))
+
+def draw_food(food):
+    pygame.draw.rect(screen, RED, (*food, BLOCK, BLOCK))
+
+def show_score(score):
+    text = font.render(f"Score: {score}", True, WHITE)
+    screen.blit(text, (10, 10))
+
+# Game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP and snake_dir != (0, BLOCK):
+                snake_dir = (0, -BLOCK)
+            if event.key == pygame.K_DOWN and snake_dir != (0, -BLOCK):
+                snake_dir = (0, BLOCK)
+            if event.key == pygame.K_LEFT and snake_dir != (BLOCK, 0):
+                snake_dir = (-BLOCK, 0)
+            if event.key == pygame.K_RIGHT and snake_dir != (-BLOCK, 0):
+                snake_dir = (BLOCK, 0)
+
+    # Move snake
+    head_x = snake[0][0] + snake_dir[0]
+    head_y = snake[0][1] + snake_dir[1]
+    new_head = (head_x, head_y)
+
+    # Collision with wall
+    if (
+        head_x < 0 or head_x >= WIDTH or
+        head_y < 0 or head_y >= HEIGHT or
+        new_head in snake
+    ):
+        print("Game Over! Final Score:", score)
+        pygame.quit()
+        sys.exit()
+
+    snake.insert(0, new_head)
+
+    # Food collision
+    if new_head == food:
+        score += 1
+        food = (
+            random.randrange(0, WIDTH, BLOCK),
+            random.randrange(0, HEIGHT, BLOCK)
+        )
+    else:
+        snake.pop()
+
+    # Draw everything
+    screen.fill(BLACK)
+    draw_snake(snake)
+    draw_food(food)
+    show_score(score)
+
+    pygame.display.update()
+    clock.tick(10)
