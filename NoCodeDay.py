@@ -195,20 +195,35 @@
 # print("Finished")
 
 
+# import random
+
+# secret_number = random.randint(1, 10)
+
+# print("Welcome to the Number Guessing Game!")
+# print("Guess a number between 1 and 10")
+
+# while True:
+#     guess = int(input("Enter your guess: "))
+
+#     if guess == secret_number:
+#         print("🎉 Correct! You guessed the number.")
+#         break
+#     elif guess < secret_number:
+#         print("Too low! Try again.")
+#     else:
+#         print("Too high! Try again.")
+
 import random
+import string
 
-secret_number = random.randint(1, 10)
+# Ask user for password length
+length = int(input("Enter password length: "))
 
-print("Welcome to the Number Guessing Game!")
-print("Guess a number between 1 and 10")
+# Characters to use
+characters = string.ascii_letters + string.digits + string.punctuation
 
-while True:
-    guess = int(input("Enter your guess: "))
+# Generate password
+password = ''.join(random.choice(characters) for _ in range(length))
 
-    if guess == secret_number:
-        print("🎉 Correct! You guessed the number.")
-        break
-    elif guess < secret_number:
-        print("Too low! Try again.")
-    else:
-        print("Too high! Try again.")
+print("\nGenerated Password:")
+print(password)
