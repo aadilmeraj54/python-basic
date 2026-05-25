@@ -228,103 +228,132 @@
 # print("\nGenerated Password:")
 # print(password)
 
-import pygame
-import random
-import sys
+# import pygame
+# import random
+# import sys
 
-# Initialize pygame
-pygame.init()
+# # Initialize pygame
+# pygame.init()
 
-# Screen size
-WIDTH = 600
-HEIGHT = 400
-BLOCK = 20
+# # Screen size
+# WIDTH = 600
+# HEIGHT = 400
+# BLOCK = 20
 
-# Colors
-BLACK = (0, 0, 0)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
-WHITE = (255, 255, 255)
+# # Colors
+# BLACK = (0, 0, 0)
+# GREEN = (0, 255, 0)
+# RED = (255, 0, 0)
+# WHITE = (255, 255, 255)
 
-# Create screen
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Snake Game")
+# # Create screen
+# screen = pygame.display.set_mode((WIDTH, HEIGHT))
+# pygame.display.set_caption("Snake Game")
 
-clock = pygame.time.Clock()
-font = pygame.font.SysFont("Arial", 25)
+# clock = pygame.time.Clock()
+# font = pygame.font.SysFont("Arial", 25)
 
-# Snake settings
-snake = [(100, 100)]
-snake_dir = (BLOCK, 0)
+# # Snake settings
+# snake = [(100, 100)]
+# snake_dir = (BLOCK, 0)
 
-# Food
-food = (
-    random.randrange(0, WIDTH, BLOCK),
-    random.randrange(0, HEIGHT, BLOCK)
-)
+# # Food
+# food = (
+#     random.randrange(0, WIDTH, BLOCK),
+#     random.randrange(0, HEIGHT, BLOCK)
+# )
 
-score = 0
+# score = 0
 
-def draw_snake(snake):
-    for segment in snake:
-        pygame.draw.rect(screen, GREEN, (*segment, BLOCK, BLOCK))
+# def draw_snake(snake):
+#     for segment in snake:
+#         pygame.draw.rect(screen, GREEN, (*segment, BLOCK, BLOCK))
 
-def draw_food(food):
-    pygame.draw.rect(screen, RED, (*food, BLOCK, BLOCK))
+# def draw_food(food):
+#     pygame.draw.rect(screen, RED, (*food, BLOCK, BLOCK))
 
-def show_score(score):
-    text = font.render(f"Score: {score}", True, WHITE)
-    screen.blit(text, (10, 10))
+# def show_score(score):
+#     text = font.render(f"Score: {score}", True, WHITE)
+#     screen.blit(text, (10, 10))
 
-# Game loop
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+# # Game loop
+# while True:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             sys.exit()
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP and snake_dir != (0, BLOCK):
-                snake_dir = (0, -BLOCK)
-            if event.key == pygame.K_DOWN and snake_dir != (0, -BLOCK):
-                snake_dir = (0, BLOCK)
-            if event.key == pygame.K_LEFT and snake_dir != (BLOCK, 0):
-                snake_dir = (-BLOCK, 0)
-            if event.key == pygame.K_RIGHT and snake_dir != (-BLOCK, 0):
-                snake_dir = (BLOCK, 0)
+#         if event.type == pygame.KEYDOWN:
+#             if event.key == pygame.K_UP and snake_dir != (0, BLOCK):
+#                 snake_dir = (0, -BLOCK)
+#             if event.key == pygame.K_DOWN and snake_dir != (0, -BLOCK):
+#                 snake_dir = (0, BLOCK)
+#             if event.key == pygame.K_LEFT and snake_dir != (BLOCK, 0):
+#                 snake_dir = (-BLOCK, 0)
+#             if event.key == pygame.K_RIGHT and snake_dir != (-BLOCK, 0):
+#                 snake_dir = (BLOCK, 0)
 
-    # Move snake
-    head_x = snake[0][0] + snake_dir[0]
-    head_y = snake[0][1] + snake_dir[1]
-    new_head = (head_x, head_y)
+#     # Move snake
+#     head_x = snake[0][0] + snake_dir[0]
+#     head_y = snake[0][1] + snake_dir[1]
+#     new_head = (head_x, head_y)
 
-    # Collision with wall
-    if (
-        head_x < 0 or head_x >= WIDTH or
-        head_y < 0 or head_y >= HEIGHT or
-        new_head in snake
-    ):
-        print("Game Over! Final Score:", score)
-        pygame.quit()
-        sys.exit()
+#     # Collision with wall
+#     if (
+#         head_x < 0 or head_x >= WIDTH or
+#         head_y < 0 or head_y >= HEIGHT or
+#         new_head in snake
+#     ):
+#         print("Game Over! Final Score:", score)
+#         pygame.quit()
+#         sys.exit()
 
-    snake.insert(0, new_head)
+#     snake.insert(0, new_head)
 
-    # Food collision
-    if new_head == food:
-        score += 1
-        food = (
-            random.randrange(0, WIDTH, BLOCK),
-            random.randrange(0, HEIGHT, BLOCK)
-        )
-    else:
-        snake.pop()
+#     # Food collision
+#     if new_head == food:
+#         score += 1
+#         food = (
+#             random.randrange(0, WIDTH, BLOCK),
+#             random.randrange(0, HEIGHT, BLOCK)
+#         )
+#     else:
+#         snake.pop()
 
-    # Draw everything
-    screen.fill(BLACK)
-    draw_snake(snake)
-    draw_food(food)
-    show_score(score)
+#     # Draw everything
+#     screen.fill(BLACK)
+#     draw_snake(snake)
+#     draw_food(food)
+#     show_score(score)
 
-    pygame.display.update()
-    clock.tick(10)
+#     pygame.display.update()
+#     clock.tick(10)
+
+import time
+
+text = "Python is fun and easy to learn."
+
+print("Typing Speed Test")
+print("------------------")
+print("Type this sentence exactly:")
+print(text)
+
+input("\nPress Enter when you're ready...")
+
+start_time = time.time()
+
+typed = input("\nStart typing: ")
+
+end_time = time.time()
+
+time_taken = end_time - start_time
+
+if typed == text:
+    words = len(text.split())
+    wpm = (words / time_taken) * 60
+
+    print("\n✅ Correct!")
+    print(f"Time Taken: {time_taken:.2f} seconds")
+    print(f"Typing Speed: {wpm:.2f} WPM")
+else:
+    print("\n❌ Text did not match.")
