@@ -521,24 +521,32 @@
 
 # Mini Calculator
 
-num1 = float(input("First number: "))
-op = input("Choose (+, -, *, /): ")
-num2 = float(input("Second number: "))
+# num1 = float(input("First number: "))
+# op = input("Choose (+, -, *, /): ")
+# num2 = float(input("Second number: "))
 
-if op == "+":
-    print("Answer:", num1 + num2)
+# if op == "+":
+#     print("Answer:", num1 + num2)
 
-elif op == "-":
-    print("Answer:", num1 - num2)
+# elif op == "-":
+#     print("Answer:", num1 - num2)
 
-elif op == "*":
-    print("Answer:", num1 * num2)
+# elif op == "*":
+#     print("Answer:", num1 * num2)
 
-elif op == "/":
-    if num2 != 0:
-        print("Answer:", num1 / num2)
-    else:
-        print("Cannot divide by zero")
+# elif op == "/":
+#     if num2 != 0:
+#         print("Answer:", num1 / num2)
+#     else:
+#         print("Cannot divide by zero")
 
-else:
-    print("Invalid operator")
+# else:
+#     print("Invalid operator")
+
+# Coin Toss Simulator
+
+import random
+
+toss = random.choice(["Heads", "Tails"])
+
+print("🪙", toss)
