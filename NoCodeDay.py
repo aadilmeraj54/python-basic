@@ -545,8 +545,14 @@
 
 # Coin Toss Simulator
 
+# import random
+
+# toss = random.choice(["Heads", "Tails"])
+
+# print("🪙", toss)
+
+# Dice Roller
+
 import random
 
-toss = random.choice(["Heads", "Tails"])
-
-print("🪙", toss)
+print("🎲 You rolled:", random.randint(1, 6))
