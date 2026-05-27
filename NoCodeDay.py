@@ -488,16 +488,32 @@
 
 # Mini Dice Roller 🎲
 
-import random
+# import random
 
-while True:
-    input("Press Enter to roll the dice...")
+# while True:
+#     input("Press Enter to roll the dice...")
     
-    dice = random.randint(1, 6)
-    print("You rolled:", dice)
+#     dice = random.randint(1, 6)
+#     print("You rolled:", dice)
 
-    again = input("Roll again? (y/n): ").lower()
+#     again = input("Roll again? (y/n): ").lower()
 
-    if again != 'y':
-        print("Thanks for playing!")
-        break
+#     if again != 'y':
+#         print("Thanks for playing!")
+#         break
+
+
+import random
+import string
+
+length = int(input("Enter password length: "))
+
+characters = string.ascii_letters + string.digits + string.punctuation
+
+password = ""
+
+for i in range(length):
+    password += random.choice(characters)
+
+print("\nGenerated Password:")
+print(password)
