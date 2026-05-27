@@ -553,6 +553,13 @@
 
 # Dice Roller
 
-import random
+# import random
 
-print("🎲 You rolled:", random.randint(1, 6))
+# print("🎲 You rolled:", random.randint(1, 6))
+
+# Simple Countdown
+
+for i in range(5, 0, -1):
+    print(i)
+
+print("🚀 Go!")
