@@ -503,17 +503,42 @@
 #         break
 
 
-import random
-import string
+# import random
+# import string
 
-length = int(input("Enter password length: "))
+# length = int(input("Enter password length: "))
 
-characters = string.ascii_letters + string.digits + string.punctuation
+# characters = string.ascii_letters + string.digits + string.punctuation
 
-password = ""
+# password = ""
 
-for i in range(length):
-    password += random.choice(characters)
+# for i in range(length):
+#     password += random.choice(characters)
 
-print("\nGenerated Password:")
-print(password)
+# print("\nGenerated Password:")
+# print(password)
+
+
+# Mini Calculator
+
+num1 = float(input("First number: "))
+op = input("Choose (+, -, *, /): ")
+num2 = float(input("Second number: "))
+
+if op == "+":
+    print("Answer:", num1 + num2)
+
+elif op == "-":
+    print("Answer:", num1 - num2)
+
+elif op == "*":
+    print("Answer:", num1 * num2)
+
+elif op == "/":
+    if num2 != 0:
+        print("Answer:", num1 / num2)
+    else:
+        print("Cannot divide by zero")
+
+else:
+    print("Invalid operator")
