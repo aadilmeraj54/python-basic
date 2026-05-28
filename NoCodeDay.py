@@ -582,13 +582,42 @@
 
 # Mini Countdown Timer ⏳
 
+# import time
+
+# seconds = int(input("Enter countdown time in seconds: "))
+
+# while seconds > 0:
+#     print("Time left:", seconds, "seconds")
+#     time.sleep(1)
+#     seconds -= 1
+
+# print("⏰ Time's up!")
+
 import time
 
-seconds = int(input("Enter countdown time in seconds: "))
+text = "Python is fun and easy to learn."
 
-while seconds > 0:
-    print("Time left:", seconds, "seconds")
-    time.sleep(1)
-    seconds -= 1
+print("Typing Speed Test")
+print("------------------")
+print("Type this sentence exactly:")
+print(text)
 
-print("⏰ Time's up!")
+input("\nPress Enter when you're ready...")
+
+start_time = time.time()
+
+typed = input("\nStart typing: ")
+
+end_time = time.time()
+
+time_taken = end_time - start_time
+
+if typed == text:
+    words = len(text.split())
+    wpm = (words / time_taken) * 60
+
+    print("\n✅ Correct!")
+    print(f"Time Taken: {time_taken:.2f} seconds")
+    print(f"Typing Speed: {wpm:.2f} WPM")
+else:
+    print("\n❌ Text did not match.")
