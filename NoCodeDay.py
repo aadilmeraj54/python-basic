@@ -566,16 +566,29 @@
 
 # Mini Dice Roller 🎲
 
-import random
+# import random
 
-while True:
-    input("Press Enter to roll the dice...")
+# while True:
+#     input("Press Enter to roll the dice...")
     
-    dice = random.randint(1, 6)
-    print("You rolled:", dice)
+#     dice = random.randint(1, 6)
+#     print("You rolled:", dice)
 
-    again = input("Roll again? (y/n): ").lower()
+#     again = input("Roll again? (y/n): ").lower()
 
-    if again != 'y':
-        print("Thanks for playing!")
-        break
+#     if again != 'y':
+#         print("Thanks for playing!")
+#         break
+
+# Mini Countdown Timer ⏳
+
+import time
+
+seconds = int(input("Enter countdown time in seconds: "))
+
+while seconds > 0:
+    print("Time left:", seconds, "seconds")
+    time.sleep(1)
+    seconds -= 1
+
+print("⏰ Time's up!")
