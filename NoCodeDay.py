@@ -559,7 +559,23 @@
 
 # Simple Countdown
 
-for i in range(5, 0, -1):
-    print(i)
+# for i in range(5, 0, -1):
+#     print(i)
 
-print("🚀 Go!")
+# print("🚀 Go!")
+
+# Mini Dice Roller 🎲
+
+import random
+
+while True:
+    input("Press Enter to roll the dice...")
+    
+    dice = random.randint(1, 6)
+    print("You rolled:", dice)
+
+    again = input("Roll again? (y/n): ").lower()
+
+    if again != 'y':
+        print("Thanks for playing!")
+        break
