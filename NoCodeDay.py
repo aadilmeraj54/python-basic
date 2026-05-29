@@ -635,7 +635,12 @@
 # print("Welcome to Python")
 # print("Have a great day!")
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-sum = a + b
-print("Sum =", sum)
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# sum = a + b
+# print("Sum =", sum)
+
+for i in range(1, 5):
+    print("Number:", i)
+print("Loop finished")
+print("Done!")
