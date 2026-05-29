@@ -640,7 +640,13 @@
 # sum = a + b
 # print("Sum =", sum)
 
-for i in range(1, 5):
-    print("Number:", i)
-print("Loop finished")
-print("Done!")
+# for i in range(1, 5):
+#     print("Number:", i)
+# print("Loop finished")
+# print("Done!")
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
