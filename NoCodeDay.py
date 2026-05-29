@@ -651,7 +651,11 @@
 # else:
 #     print("Odd Number")
 
-word = input("Enter a word: ")
-length = len(word)
-print("Length of word =", length)
-print("Program Ended")
+# word = input("Enter a word: ")
+# length = len(word)
+# print("Length of word =", length)
+# print("Program Ended")
+
+for i in range(1, 5):
+    print("Hello, World!")
+print("Done")
