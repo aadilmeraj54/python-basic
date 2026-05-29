@@ -645,8 +645,13 @@
 # print("Loop finished")
 # print("Done!")
 
-num = int(input("Enter a number: "))
-if num % 2 == 0:
-    print("Even Number")
-else:
-    print("Odd Number")
+# num = int(input("Enter a number: "))
+# if num % 2 == 0:
+#     print("Even Number")
+# else:
+#     print("Odd Number")
+
+word = input("Enter a word: ")
+length = len(word)
+print("Length of word =", length)
+print("Program Ended")
