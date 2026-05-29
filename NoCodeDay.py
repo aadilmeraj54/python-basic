@@ -630,7 +630,12 @@
 
 # print("Temperature in Fahrenheit:", fahrenheit)
 
-name = input("Enter your name: ")
-print("Hello,", name)
-print("Welcome to Python")
-print("Have a great day!")
+# name = input("Enter your name: ")
+# print("Hello,", name)
+# print("Welcome to Python")
+# print("Have a great day!")
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+sum = a + b
+print("Sum =", sum)
