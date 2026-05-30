@@ -656,6 +656,13 @@
 # print("Length of word =", length)
 # print("Program Ended")
 
-for i in range(1, 5):
-    print("Hello, World!")
-print("Done")
+# for i in range(1, 5):
+#     print("Hello, World!")
+# print("Done")
+
+print("Even or Odd Checker")
+n = int(input("Enter a number: "))
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
