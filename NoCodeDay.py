@@ -690,5 +690,9 @@
 #     print(a)
 #     a, b = b, a + b
 
-n = int(input("Enter number: "))
-print("Square is:", n*n)
+# n = int(input("Enter number: "))
+# print("Square is:", n*n)
+
+c = float(input("Enter Celsius: "))
+f = (c * 9/5) + 32
+print("Fahrenheit:", f)
