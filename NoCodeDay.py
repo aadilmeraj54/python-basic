@@ -697,6 +697,10 @@
 # f = (c * 9/5) + 32
 # print("Fahrenheit:", f)
 
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# print("Largest is:", a if a > b else b)
+
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
 print("Largest is:", a if a > b else b)
