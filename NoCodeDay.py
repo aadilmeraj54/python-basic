@@ -701,6 +701,9 @@
 # b = int(input("Enter second number: "))
 # print("Largest is:", a if a > b else b)
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-print("Largest is:", a if a > b else b)
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# print("Largest is:", a if a > b else b)
+
+n = int(input("Enter number: "))
+print("Prime" if n > 1 and all(n % i != 0 for i in range(2, n)) else "Not Prime")
