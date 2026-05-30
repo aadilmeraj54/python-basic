@@ -675,10 +675,17 @@
 #     fact *= i
 # print(fact)
 
-print("Palindrome Checker")
-s = input("Enter text: ")
-rev = s[::-1]
-if s == rev:
-    print("Palindrome")
-else:
-    print("Not Palindrome")
+# print("Palindrome Checker")
+# s = input("Enter text: ")
+# rev = s[::-1]
+# if s == rev:
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+
+print("Fibonacci Series")
+n = int(input("Enter number of terms: "))
+a, b = 0, 1
+for i in range(n):
+    print(a)
+    a, b = b, a + b
