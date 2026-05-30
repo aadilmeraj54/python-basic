@@ -660,9 +660,17 @@
 #     print("Hello, World!")
 # print("Done")
 
-print("Even or Odd Checker")
+# print("Even or Odd Checker")
+# n = int(input("Enter a number: "))
+# if n % 2 == 0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+
+print("Factorial Calculator")
 n = int(input("Enter a number: "))
-if n % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
+fact = 1
+for i in range(1, n + 1):
+    fact *= i
+print(fact)
